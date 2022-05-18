@@ -15,7 +15,7 @@ const loadingScreen = () => {
 const searchMovie = async (keyword) => {
   const xhr = new XMLHttpRequest();
 
-  xhr.open("GET", `${BASE_URL}/SearchMovie/${apiKey3}/${keyword}`, true);
+  xhr.open("GET", `${BASE_URL}/SearchMovie/${apiKey1}/${keyword}`, true);
 
   xhr.onprogress = loadingScreen();
 
@@ -241,7 +241,7 @@ const displayWriters = (data) => data.map(({ name }) => name).join(", ");
 const getReviews = async (id) => {
   const xhr = new XMLHttpRequest();
 
-  xhr.open("GET", `${BASE_URL}/Reviews/${apiKey3}/${id}`, true);
+  xhr.open("GET", `${BASE_URL}/Reviews/${apiKey1}/${id}`, true);
 
   xhr.onload = () => {
     if (xhr.status == 200) {
